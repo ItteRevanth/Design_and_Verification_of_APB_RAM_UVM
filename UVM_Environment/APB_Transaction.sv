@@ -21,6 +21,7 @@ class apb_transaction extends uvm_sequence_item;
 
   // ---------------- UVM Macros for Automation ----------------
   `uvm_object_utils_begin(apb_transaction)   // Register the class with factory and provide field automation
+    `uvm_field_enum(oper, UVM_ALL_ON)        //Enables operation type
     `uvm_field_int(psel,    UVM_ALL_ON)      // Enable automation for psel
     `uvm_field_int(pwrite,  UVM_ALL_ON)      // Enable automation for pwrite
     `uvm_field_int(penable, UVM_ALL_ON)      // Enable automation for penable
