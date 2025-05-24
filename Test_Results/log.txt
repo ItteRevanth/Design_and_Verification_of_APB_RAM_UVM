@@ -1,0 +1,978 @@
+[2025-05-24 10:20:57 UTC] vlib work && vlog '-timescale' '1ns/1ns' +incdir+$RIVIERA_HOME/vlib/uvm-1.2/src -l uvm_1_2 -err VCP2947 W9 -err VCP2974 W9 -err VCP3003 W9 -err VCP5417 W9 -err VCP6120 W9 -err VCP7862 W9 -err VCP2129 W9 design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = /home/runner/work/work.lib
+MESSAGE_SP VCP2124 "Package uvm_pkg found in library uvm_1_2."
+MESSAGE "Unit top modules: tb_top."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 5[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2023.04.112.8911 built for Linux64 on May 12, 2023.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2023 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Package 'uvm_pkg' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.6 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/usr/share/Riviera-PRO/bin/libsystf.so'
+# ELAB2: Create instances ...
+# KERNEL: Info: Loading library:  /usr/share/Riviera-PRO/bin/uvm_1_2_dpi
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 4 (40.00%) other processes in SLP
+# SLP: 21 (0.07%) signals in SLP and 28 (0.09%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.5 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 29780 kB (elbread=2086 elab2=22776 kernel=4918 sdf=0)
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: UVM-1.2
+# KERNEL: (C) 2007-2014 Mentor Graphics Corporation
+# KERNEL: (C) 2007-2014 Cadence Design Systems, Inc.
+# KERNEL: (C) 2006-2014 Synopsys, Inc.
+# KERNEL: (C) 2011-2013 Cypress Semiconductor Corp.
+# KERNEL: (C) 2013-2014 NVIDIA Corporation
+# KERNEL: ----------------------------------------------------------------
+# KERNEL: 
+# KERNEL:   ***********       IMPORTANT RELEASE NOTES         ************
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_NO_DEPRECATED undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# KERNEL: 
+# KERNEL:   You are using a version of the UVM library that has been compiled
+# KERNEL:   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+# KERNEL:   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# KERNEL: 
+# KERNEL:       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# KERNEL: 
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test apb_test...
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_root.svh(583) @ 0: reporter [UVMTOP] UVM testbench topology:
+# KERNEL: --------------------------------------------------------------
+# KERNEL: Name                       Type                    Size  Value
+# KERNEL: --------------------------------------------------------------
+# KERNEL: uvm_test_top               apb_test                -     @340 
+# KERNEL:   apb_env                  apb_environment         -     @353 
+# KERNEL:     apb_agt                apb_agent               -     @367 
+# KERNEL:       apb_drv              apb_driver              -     @386 
+# KERNEL:         rsp_port           uvm_analysis_port       -     @405 
+# KERNEL:         seq_item_port      uvm_seq_item_pull_port  -     @395 
+# KERNEL:       apb_mon              apb_monitor             -     @415 
+# KERNEL:         mon_2_sco          uvm_analysis_port       -     @563 
+# KERNEL:       apb_seqr             apb_sequencer           -     @424 
+# KERNEL:         rsp_export         uvm_analysis_export     -     @433 
+# KERNEL:         seq_item_export    uvm_seq_item_pull_imp   -     @551 
+# KERNEL:         arbitration_queue  array                   0     -    
+# KERNEL:         lock_queue         array                   0     -    
+# KERNEL:         num_last_reqs      integral                32    'd1  
+# KERNEL:         num_last_rsps      integral                32    'd1  
+# KERNEL:     apb_sco                apb_scoreboard          -     @376 
+# KERNEL:       recv_mon             uvm_analysis_imp        -     @580 
+# KERNEL: --------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 0: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    0                                            
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 70: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    0                                            
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 70: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h6                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    70                                           
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 90: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h4  
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(270) @ 90: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Data written at 4 as 7
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 150: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h6                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    70                                           
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 150: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h3                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    150                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 170: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h2  
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(275) @ 170: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 230: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h3                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    150                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 230: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h5                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    230                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 250: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h33 
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h1  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(280) @ 250: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Slave error detected!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 310: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h5                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    230                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 310: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    310                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 330: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h2  
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(275) @ 330: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 390: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    310                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 390: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    390                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 410: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h2  
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(275) @ 410: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 470: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    390                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 470: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h2                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    470                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 490: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h4  
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(277) @ 490: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 550: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h2                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    470                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 550: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    550                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 570: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h50 
+# KERNEL:   pwdata   integral         32    'h2  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h1  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(280) @ 570: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Slave error detected!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 630: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    550                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 630: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    630                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 650: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h4  
+# KERNEL:   pwdata   integral         32    'h4  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(270) @ 650: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Data written at 4 as 4
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 710: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    write                                        
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    630                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 710: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    710                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 730: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h2  
+# KERNEL:   pwdata   integral         32    'h4  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(270) @ 730: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Data written at 2 as 4
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 790: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    710                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 790: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    790                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 810: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h2  
+# KERNEL:   pwdata   integral         32    'h4  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(270) @ 810: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Data written at 2 as 4
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 870: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    790                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 870: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h5                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    870                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 890: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h5a 
+# KERNEL:   pwdata   integral         32    'h9  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h1  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(280) @ 890: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Slave error detected!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 950: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h4                                          
+# KERNEL:   pwdata                       integral         32    'h5                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    870                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 950: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h3                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    950                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 970: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h4  
+# KERNEL:   pwdata   integral         32    'h9  
+# KERNEL:   prdata   integral         32    'h4  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(275) @ 970: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 1030: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    random                                       
+# KERNEL:   psel                         integral         1     'h0                                          
+# KERNEL:   pwrite                       integral         1     'h0                                          
+# KERNEL:   penable                      integral         1     'h1                                          
+# KERNEL:   paddr                        integral         32    'h3                                          
+# KERNEL:   pwdata                       integral         32    'h9                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    950                                          
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 1030: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    1030                                         
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 1050: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h0  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h3  
+# KERNEL:   pwdata   integral         32    'h9  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h0  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(275) @ 1050: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Read data matched!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 1110: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    error                                        
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h7                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    1030                                         
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(72) @ 1110: uvm_test_top.apb_env.apb_agt.apb_seqr@@apb_seq [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq] The data sent to the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    1110                                         
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(225) @ 1130: uvm_test_top.apb_env.apb_agt.apb_mon [uvm_test_top.apb_env.apb_agt.apb_mon] The data received by the monitor is : 
+# KERNEL:  ---------------------------------------
+# KERNEL: Name       Type             Size  Value
+# KERNEL: ---------------------------------------
+# KERNEL: apb_tr     apb_transaction  -     @574 
+# KERNEL:   oper     oper_type        32    write
+# KERNEL:   psel     integral         1     'h0  
+# KERNEL:   pwrite   integral         1     'h1  
+# KERNEL:   penable  integral         1     'h0  
+# KERNEL:   paddr    integral         32    'h51 
+# KERNEL:   pwdata   integral         32    'h7  
+# KERNEL:   prdata   integral         32    'h0  
+# KERNEL:   pslverr  integral         1     'h1  
+# KERNEL:   pready   integral         1     'h0  
+# KERNEL: ---------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/testbench.sv(280) @ 1130: uvm_test_top.apb_env.apb_sco [uvm_test_top.apb_env.apb_sco] Slave error detected!
+# KERNEL: UVM_INFO /home/runner/testbench.sv(114) @ 1190: uvm_test_top.apb_env.apb_agt.apb_drv [uvm_test_top.apb_env.apb_agt.apb_drv] The data sent by the driver is : 
+# KERNEL:  ---------------------------------------------------------------------------------------------------
+# KERNEL: Name                           Type             Size  Value                                        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: apb_tr                         apb_transaction  -     @606                                         
+# KERNEL:   oper                         oper_type        32    read                                         
+# KERNEL:   psel                         integral         1     'h1                                          
+# KERNEL:   pwrite                       integral         1     'h1                                          
+# KERNEL:   penable                      integral         1     'h0                                          
+# KERNEL:   paddr                        integral         32    'h2                                          
+# KERNEL:   pwdata                       integral         32    'h4                                          
+# KERNEL:   prdata                       integral         32    'h0                                          
+# KERNEL:   pslverr                      integral         1     'h0                                          
+# KERNEL:   pready                       integral         1     'h0                                          
+# KERNEL:   begin_time                   time             64    1110                                         
+# KERNEL:   depth                        int              32    'd2                                          
+# KERNEL:   parent sequence (name)       string           7     apb_seq                                      
+# KERNEL:   parent sequence (full name)  string           45    uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq
+# KERNEL:   sequencer                    string           37    uvm_test_top.apb_env.apb_agt.apb_seqr        
+# KERNEL: ---------------------------------------------------------------------------------------------------
+# KERNEL: 
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1195: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 1195: reporter [UVM/REPORT/SERVER] 
+# KERNEL: --- UVM Report Summary ---
+# KERNEL: 
+# KERNEL: ** Report counts by severity
+# KERNEL: UVM_INFO :   61
+# KERNEL: UVM_WARNING :    0
+# KERNEL: UVM_ERROR :    0
+# KERNEL: UVM_FATAL :    0
+# KERNEL: ** Report counts by id
+# KERNEL: [RNTST]     1
+# KERNEL: [TEST_DONE]     1
+# KERNEL: [UVM/RELNOTES]     1
+# KERNEL: [UVMTOP]     1
+# KERNEL: [uvm_test_top.apb_env.apb_agt.apb_drv]    15
+# KERNEL: [uvm_test_top.apb_env.apb_agt.apb_mon]    15
+# KERNEL: [uvm_test_top.apb_env.apb_agt.apb_seqr.apb_seq]    15
+# KERNEL: [uvm_test_top.apb_env.apb_sco]    15
+# KERNEL: 
+# RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
+# KERNEL: Time: 1195 ns,  Iteration: 56,  Instance: /tb_top,  Process: @INITIAL#395_2@.
+# KERNEL: stopped at time: 1195 ns
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Done
