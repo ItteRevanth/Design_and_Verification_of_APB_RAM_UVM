@@ -1,1 +1,1 @@
-##### The output waveform stored in the .vcd file
+##### The output waveform and the log file
